@@ -22,6 +22,7 @@
  '(c-basic-offset 2)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
+ '(package-selected-packages (quote (grin exec-path-from-shell ag)))
  '(tab-width 4))
 
 (global-set-key (kbd "M-0") 'delete-window) ; was digit-argument
