@@ -22,7 +22,7 @@
  '(c-basic-offset 2)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
- '(package-selected-packages (quote (grin exec-path-from-shell ag)))
+ '(package-selected-packages (quote (magit grin exec-path-from-shell ag)))
  '(tab-width 4))
 
 (global-set-key (kbd "M-0") 'delete-window) ; was digit-argument
@@ -53,6 +53,9 @@
 (add-to-list 'auto-mode-alist '("\\.ini$" . conf-windows-mode))
 
 (require 'grin)
+
+(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x m") 'magit-status)
 
 ;; colors
 (require 'color-theme)
