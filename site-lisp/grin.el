@@ -1,13 +1,7 @@
 ;; python grin support for emacs. Based on ack support script from:
 ;; http://stackoverflow.com/questions/2322389/ack-does-not-work-when-run-from-grep-find-in-emacs-on-windows
 
-(defcustom grin-command (or (executable-find "grin")
-                            (executable-find "grin-grep"))
-  "Command to use to call grin"
-  :type 'file)
-
-(defvar grin-command-line
-  (concat grin-command " -d CVS,RCS,.svn,.hg,.bzr,.git --emacs "))
+(defvar grin-command-line "grin -d CVS,RCS,.svn,.hg,.bzr,.git --emacs ")
 (defvar grin-history nil)
 (defvar grin-host-defaults-alist nil)
 
