@@ -120,7 +120,7 @@
 
 (defun add-python-template ()
   (interactive)
-  (insert "#! /usr/bin/env python\n")
+  (insert "#! /usr/bin/env python3\n")
   (newline)
   (insert "\"\"\"TODO(Rich): Add documentation.\n")
   (insert "\"\"\"\n")
