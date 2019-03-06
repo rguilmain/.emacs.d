@@ -2,9 +2,6 @@
 (ido-mode t)
 (setq ido-enable-flex-matching t) ;; enable fuzzy matching
 
-(add-hook 'term-setup-hook
-               #'(lambda () (w32-send-sys-command ?\xF030)))
-
 (global-auto-revert-mode 1) ;; revert unmodified buffers that changed on disk
 
 (fringe-mode '(0 . 0))  ; == no fringes
@@ -22,7 +19,7 @@
  '(c-basic-offset 2)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
- '(package-selected-packages (quote (magit grin exec-path-from-shell ag)))
+ '(package-selected-packages (quote (fireplace magit grin exec-path-from-shell ag)))
  '(tab-width 4))
 
 (global-set-key (kbd "M-0") 'delete-window) ; was digit-argument
@@ -82,6 +79,10 @@
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+
+;; Cache passwords to make Tramp mode a more pleasant experience.
+(require 'password-cache)
+(setq password-cache-expiry nil)
 
 ;; etags stuff
 (require 'etags-select)
